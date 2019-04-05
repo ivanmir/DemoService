@@ -1,0 +1,6 @@
+---
+applications:
+  - name: DemoService
+    memory: 512M
+    buildpack: sap_java_buildpack
+    path: target/DemoService-0.0.1-SNAPSHOT.war  

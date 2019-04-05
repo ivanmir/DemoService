@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sap.cloud.servicesdk.prov</groupId>
+		<artifactId>projects-parent</artifactId>
+		<version>1.28.1</version>
+	</parent>
+
+	<artifactId>DemoService</artifactId>
+	<groupId>com.example.odata</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<packaging>war</packaging>
+	<name>Gateway Runtime Reference Content: Java Project for DevX</name>
+
+	<properties>
+		<!-- Name of the package containing the OData service provisioning code -->
+		<packageName>com.example.odata.DemoService</packageName>
+		<sap.gateway.version>1.13.1</sap.gateway.version>
+		<sap.cloud.sdk.version>3.76.12</sap.cloud.sdk.version>
+	</properties>
+	<dependencies>
+		<!-- SAP Cloud Platform SDK dependencies -->
+		<!-- Neo Java Web Tomcat 8 -->
+		<dependency>
+		    <groupId>com.sap.cloud</groupId>
+		    <artifactId>neo-java-web-api</artifactId>
+			<version>${sap.cloud.sdk.version}</version>
+			<scope>provided</scope>
+		</dependency>	
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>		
+	</dependencies>
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+	</build>
+
+</project>
